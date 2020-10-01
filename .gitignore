@@ -2,7 +2,7 @@
 using namespace std;
 class A
 {
-private:
+public:
     int x ;
 public:
     A()
@@ -27,7 +27,7 @@ public:
 };
 class B : public A
 {
-private:
+public:
     int y ;
 public:
     B() : A ()
@@ -54,14 +54,14 @@ public:
 int main(void)
 {
     cout << "\n\n The first object b1 is in use**\n " ;
-    B b1 ;
-    b1.Enter_x();
-    b1.Enter_y();
+    B b ;
+    b.Enter_x();
+    b.Enter_y();
+    b.Display_x();
+    b.Display_y();
+    cout << "\n\n The second object b1 is in use**\n " ;
+    B b1(5, 6);
     b1.Display_x();
     b1.Display_y();
-    cout << "\n\n The second object b2 is in use**\n " ;
-    B b2(5, 6);
-    b2.Display_x();
-    b2.Display_y();
     return 0;
 }
